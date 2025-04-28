@@ -1,0 +1,121 @@
+$ColourLight: #f8f3d9;
+$ColourMedium: #ebe5c2;
+$ColourMediumDark: #b9b28a;
+$ColourDark: #504b38;
+
+.app {
+  display: flex;
+  justify-content: center;
+  .container {
+    width: 1024px;
+    .link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    // Login and Register
+
+    .auth {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: $ColourLight;
+
+      h1 {
+        font-size: 30px;
+        font-family: Arial, Verdana, Sans-serif;
+        color: $ColourDark;
+        margin-bottom: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background-color: white;
+        width: 250px;
+        gap: 10px;
+      }
+
+      input {
+        padding: 5px;
+        border: none;
+        border-bottom: 1px solid $ColourMediumDark;
+      }
+
+      button {
+        padding: 10px;
+        border: none;
+        background-color: $ColourDark;
+        cursor: pointer;
+        color: white;
+      }
+
+      p {
+        font-size: 10px;
+        text-align: center;
+        color: Red;
+      }
+
+      span {
+        font-size: 10px;
+        text-align: center;
+      }
+
+      Link {
+        text-decoration: none;
+      }
+    }
+    //Navigation bar
+
+    .navbar {
+      .container {
+        padding: 10px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+          img {
+            width: 120px;
+          }
+        }
+
+        .links {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        h6 {
+          font-size: 16px;
+          font-weight: 300;
+        }
+
+        span {
+          cursor: pointer;
+        }
+
+        .write {
+          background-color: $ColourLight;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 300;
+          border: 2px solid white;
+
+          &:hover {
+            color: $ColourDark;
+            background-color: white;
+            border: 2px solid $ColourDark;
+          }
+        }
+      }
+    }
+  }
+}
