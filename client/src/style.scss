@@ -79,7 +79,7 @@ $ColourDark: #504b38;
 
         .logo {
           img {
-            width: 120px;
+            width: 100px;
           }
         }
 
@@ -117,5 +117,22 @@ $ColourDark: #504b38;
         }
       }
     }
+
+    // Footer
+
+    footer{
+      margin-top: 100px;
+      background-color: $ColourLight;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+
+      img{
+        height: 50px;
+      }
+    }
+
   }
 }
