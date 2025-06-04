@@ -1,31 +1,35 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Image1 from "../images/image1.jpg";
+import Image2 from "../images/image2.jpg";
+import Image3 from "../images/image3.jpg";
+import Image4 from "../images/image4.jpg";
 
 const Home = () => {
   const posts = [
     {
       id: 1,
       title: "Title of the Blog",
-      desc: "Some related description about the Blog",
-      img: "Url of the Blog",
+      desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      img: Image1,
     },
     {
       id: 2,
       title: "Title of the Blog",
-      desc: "Some related description about the Blog",
-      img: "Url of the Blog",
+      desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      img: Image2,
     },
     {
       id: 3,
       title: "Title of the Blog",
-      desc: "Some related description about the Blog",
-      img: "Url of the Blog",
+      desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      img: Image3,
     },
     {
       id: 4,
       title: "Title of the Blog",
-      desc: "Some related description about the Blog",
-      img: "Url of the Blog",
+      desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      img: Image4,
     },
   ];
 
