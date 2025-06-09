@@ -1,13 +1,16 @@
 import React from "react";
-import Logo from "../images/logo.png";      
+import { Link } from "react-router-dom";
+import Logo from "../images/logo.png";
 
 const Footer = () => {
   return (
-<footer>
-    <img src = {Logo} alt=""/>
-    <span>Footer content</span>
-  </footer>
-
-  )};
+    <footer>
+      <Link to={`/`}>
+        <img src={Logo} alt="" />
+      </Link>
+      <span>Footer content</span>
+    </footer>
+  );
+};
 
 export default Footer;

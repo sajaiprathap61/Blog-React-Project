@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Image1 from "../images/image1.jpg";
-import Image2 from "../images/image2.jpg";
-import Image3 from "../images/image3.jpg";
-import Image4 from "../images/image4.jpg";
+import Image1 from "../images/Image1.jpg";
+import Image2 from "../images/Image2.jpg";
+import Image3 from "../images/Image3.jpg";
+import Image4 from "../images/Image4.jpg";
 
 const Home = () => {
   const posts = [

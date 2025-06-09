@@ -1,32 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../images/logo.png";
+import Logo from "../images/Logo.png";
 
 const Navbar = () => {
   return (
     <div className="navbar">
       <div className="container">
         <div className="logo">
-          <img src={Logo} alt="" />
+          <Link to={`/`}>
+            <img src={Logo} alt="" />
+          </Link>
         </div>
         <div className="links">
           <Link className="link" to="/?cat=art">
-            <h6>ART</h6>
+            <h6>Art</h6>
           </Link>
           <Link className="link" to="/?cat=science">
-            <h6>SCIENCE</h6>
+            <h6>Science</h6>
           </Link>
           <Link className="link" to="/?cat=technology">
-            <h6>TECHNOLOGY</h6>
+            <h6>Technology</h6>
           </Link>
           <Link className="link" to="/?cat=cinema">
-            <h6>CINEMA</h6>
+            <h6>Cinema</h6>
           </Link>
           <Link className="link" to="/?cat=design">
-            <h6>DESIGN</h6>
+            <h6>Design</h6>
           </Link>
           <Link className="link" to="/?cat=food">
-            <h6>FOOD</h6>
+            <h6>Food</h6>
           </Link>
           <span>Sajai</span>
           <span>Logout</span>
