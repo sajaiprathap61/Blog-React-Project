@@ -16,7 +16,7 @@ $ContentImageWidth: 100%;
 $ContentImageHeight: 400px;
 
 // Button
-%button {
+%ArticleButton {
   width: max-content;
   padding: 10px 20px;
   border-radius: 15px;
@@ -24,6 +24,20 @@ $ContentImageHeight: 400px;
   background-color: white;
   border: 1px solid $ColourDark;
   color: $ColourMediumDark;
+
+  &:hover {
+    border: 1px solid white;
+    background-color: $ColourMedium;
+    color: $ColourDark;
+  }
+}
+
+%LoginAndRegisterButton {
+  padding: 10px;
+  border: 1px solid $ColourDark;
+  background-color: $ColourDark;
+  cursor: pointer;
+  color: white;
 
   &:hover {
     border: 1px solid white;
@@ -75,7 +89,7 @@ $ContentImageHeight: 400px;
       }
 
       button {
-        @extend %button;
+        @extend %LoginAndRegisterButton;
       }
 
       p {
@@ -221,7 +235,7 @@ $ContentImageHeight: 400px;
             }
 
             button {
-              @extend %button;
+              @extend %ArticleButton;
             }
           }
         }
@@ -331,7 +345,7 @@ $ContentImageHeight: 400px;
             }
 
             button {
-              @extend %button;
+              @extend %ArticleButton;
             }
           }
         }

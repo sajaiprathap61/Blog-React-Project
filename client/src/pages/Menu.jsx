@@ -2,6 +2,7 @@ import Image1 from "../images/Image1.jpg";
 import Image2 from "../images/Image2.jpg";
 import Image3 from "../images/Image3.jpg";
 import Image4 from "../images/Image4.jpg";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
   const posts = [
@@ -38,8 +39,12 @@ const Menu = () => {
         {posts.map((post) => (
           <div className="post" key={post.id}>
             <img src={post.img} />
-            <h3>{post.title}</h3>
-            <button classNam>Read More</button>
+            <Link className="link" to={`/post/${post.id}`}>
+              <h3>{post.title}</h3>
+            </Link>
+            <Link to={`/post/${post.id}`}>
+              <button classNam>Read More</button>
+            </Link>
           </div>
         ))}
       </div>
