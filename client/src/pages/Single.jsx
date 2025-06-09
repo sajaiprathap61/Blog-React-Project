@@ -4,6 +4,7 @@ import Image1 from "../images/Image1.jpg";
 import Image6 from "../images/Image6.webp";
 import Edit from "../images/Edit.png";
 import Delete from "../images/Delete.png";
+import Menu from "../pages/Menu";
 
 const Single = () => {
   return (
@@ -14,7 +15,7 @@ const Single = () => {
           <img src={Image1} />
           <div className="info">
             <span>Itachi Uchiya</span>
-            <p>Last update 2days ago</p>
+            <p>Last update 2 days ago</p>
           </div>
           <div className="edit">
             <Link to={`/write?edit=2`}>
@@ -89,7 +90,7 @@ const Single = () => {
           </p>
         </div>
       </div>
-      <div className="menu">Menu</div>
+      <Menu />
     </div>
   );
 };

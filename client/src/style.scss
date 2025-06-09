@@ -1,15 +1,36 @@
+// Colours
 $ColourLight: #f8f3d9;
 $ColourMedium: #ebe5c2;
 $ColourMediumDark: #b9b28a;
 $ColourDark: #504b38;
 
+// Fonts
 $HeaderFooterColour: lightGrey;
 $NavBarFont: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 $CommonFont: "Times New Roman", Times, serif;
+$ArticleTitleFont: Cambria, Cochin, Georgia, Times, "Times New Roman";
 
+// Image sizes
 // $ContentImageWidth: 724px;
 $ContentImageWidth: 100%;
 $ContentImageHeight: 400px;
+
+// Button
+%button {
+  width: max-content;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid $ColourDark;
+  color: $ColourMediumDark;
+
+  &:hover {
+    border: 1px solid white;
+    background-color: $ColourMedium;
+    color: $ColourDark;
+  }
+}
 
 .app {
   display: flex;
@@ -54,11 +75,7 @@ $ContentImageHeight: 400px;
       }
 
       button {
-        padding: 10px;
-        border: none;
-        background-color: $ColourDark;
-        cursor: pointer;
-        color: white;
+        @extend %button;
       }
 
       p {
@@ -192,7 +209,6 @@ $ContentImageHeight: 400px;
             flex: 3;
             display: flex;
             flex-direction: column;
-            text-align: justify;
             justify-content: space-between;
 
             h1 {
@@ -200,23 +216,12 @@ $ContentImageHeight: 400px;
             }
 
             p {
+              text-align: justify;
               font-size: 15px;
             }
 
             button {
-              width: max-content;
-              padding: 10px 20px;
-              border-radius: 15px;
-              cursor: pointer;
-              background-color: white;
-              border: 1px solid $ColourDark;
-              color: $ColourMediumDark;
-
-              &:hover {
-                border: 1px solid white;
-                background-color: $ColourMedium;
-                color: $ColourDark;
-              }
+              @extend %button;
             }
           }
         }
@@ -226,9 +231,9 @@ $ContentImageHeight: 400px;
     //Single
 
     .single {
-      margin-top: 10px;
+      margin-top: 25px;
       display: flex;
-      gap: 10px;
+      gap: 25px;
 
       .content {
         flex: 5;
@@ -281,8 +286,7 @@ $ContentImageHeight: 400px;
         .article {
           h1 {
             // padding: 0 10px 0 10px;
-            font-family: Cambria, Cochin, Georgia, Times, "Times New Roman",
-              serif;
+            font-family: $ArticleTitleFont;
           }
 
           p {
@@ -295,6 +299,42 @@ $ContentImageHeight: 400px;
 
       .menu {
         flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h3 {
+          font-family: $NavBarFont;
+          margin: 0px;
+        }
+
+        .posts {
+          display: flex;
+          flex-direction: column;
+          gap: 25px;
+
+          .post {
+            display: flex;
+            flex-direction: column;
+
+            img {
+              width: 100%;
+              height: 200px;
+              object-fit: cover;
+              border-radius: 20px;
+            }
+
+            h3 {
+              margin-top: 10px;
+              margin-bottom: 10px;
+              font-family: $ArticleTitleFont;
+            }
+
+            button {
+              @extend %button;
+            }
+          }
+        }
       }
     }
   }
