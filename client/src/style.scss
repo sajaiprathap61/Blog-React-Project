@@ -50,6 +50,7 @@ $ContentImageHeight: 400px;
   display: flex;
   justify-content: center;
   font-family: $CommonFont;
+
   .container {
     width: 1024px;
     .link {
@@ -347,6 +348,113 @@ $ContentImageHeight: 400px;
             button {
               @extend %ArticleButton;
             }
+          }
+        }
+      }
+    }
+
+    //Write
+    .add {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      margin-top: 10px;
+
+      .content {
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        input {
+          padding: 10px;
+          border: 2px solid lightgray;
+          border-radius: 10px;
+        }
+
+        .editorContainer {
+          width: 725px;
+          height: 300px;
+          overflow: hidden;
+          border: 1px solid lightgray;
+          border-radius: 10px;
+
+          .editor {
+            height: 100%;
+          }
+        }
+      }
+
+      .menu {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .item {
+          padding: 10px;
+          border: 2px solid lightgray;
+          border-radius: 10px;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          font-size: 12px;
+          color: #555;
+          font-family: $ArticleTitleFont;
+
+          h1 {
+            font-size: 20px;
+            margin: 0px;
+          }
+
+          .file {
+            border: 2px solid $ColourMedium;
+            padding: 5px;
+            border-radius: 10px;
+            text-decoration: none;
+            cursor: pointer;
+          }
+
+          .buttons {
+            display: flex;
+            justify-content: space-between;
+
+            :first-child {
+              cursor: pointer;
+              color: $ColourDark;
+              background-color: $ColourLight;
+              border: 2px solid white;
+              border-radius: 10px;
+              padding: 5px;
+
+              &:hover {
+                border: 2px solid $ColourDark;
+                background-color: white;
+              }
+            }
+
+            :last-child {
+              cursor: pointer;
+              color: $ColourDark;
+              background-color: $ColourLight;
+              border: 2px solid white;
+              border-radius: 10px;
+              padding: 5px;
+
+              &:hover {
+                border: 2px solid $ColourDark;
+                background-color: white;
+              }
+            }
+          }
+
+          .cat {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+            color: $ColourDark;
           }
         }
       }
