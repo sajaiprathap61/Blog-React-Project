@@ -47,7 +47,7 @@ $ContentImageHeight: 400px;
 }
 
 // Glass Effect
-// %GlassEffect {
+// %GlassEffectContentContainer {
 //   background: rgba(255, 255, 255, 0.2);
 //   border-radius: 16px;
 //   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
@@ -56,22 +56,27 @@ $ContentImageHeight: 400px;
 //   border: 1px solid rgba(255, 255, 255, 0.3);
 // }
 
+// %GlassEffectHeaderFooter {
+//   background: rgba(255, 255, 255, 0.2);
+//   border-radius: 0px 0px 16px 16px;
+//   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+//   backdrop-filter: blur(2px);
+//   -webkit-backdrop-filter: blur(2px);
+//   border: 1px solid rgba(255, 255, 255, 0.3);
+// }
+
 .app {
-  display: flex;
-  justify-content: center;
   font-family: $CommonFont;
-  background-image: url("./images/Background.jpg");
+  background-image: url("./images/Background1.jpg");
   background-size: contain;
 
   .container {
-    width: 1280px;
     .link {
       text-decoration: none;
       color: inherit;
     }
 
     // Login and Register
-
     .auth {
       display: flex;
       flex-direction: column;
@@ -120,18 +125,15 @@ $ContentImageHeight: 400px;
         text-decoration: none;
       }
     }
+
     //Navigation bar
-
     .navbar {
-      // @extend %GlassEffect;
-
+      // @extend %GlassEffectHeaderFooter;
       .container {
         padding: 10px 0px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: $HeaderFooterColour;
-        border-radius: 0 0 20px 20px;
 
         .logo {
           img {
@@ -178,12 +180,9 @@ $ContentImageHeight: 400px;
     }
 
     // Footer
-
     footer {
-      // @extend %GlassEffect;
+      // @extend %GlassEffectHeaderFooter;
       margin-top: 100px;
-      background-color: $HeaderFooterColour;
-      border-radius: 20px 20px 0 0;
       padding: 20px;
       display: flex;
       align-items: center;
@@ -195,284 +194,287 @@ $ContentImageHeight: 400px;
       }
     }
 
-    // HOME
-
-    .home {
-      // @extend %GlassEffect;
-      .posts {
-        margin: 50px;
-        display: flex;
-        flex-direction: column;
-        gap: 100px;
-
-        .post {
-          display: flex;
-          gap: 100px;
-
-          &:nth-child(2n + 1) {
-            flex-direction: row-reverse;
-          }
-
-          .img {
-            flex: 2;
-            position: relative;
-
-            &::after {
-              content: "";
-              width: 100%;
-              height: 100%;
-              border-radius: 15px;
-              background-color: lightgray;
-              position: absolute;
-              top: 10px;
-              left: -10px;
-              z-index: -1;
-            }
-
-            img {
-              width: 100%;
-              max-height: 400px;
-              border-radius: 15px;
-              object-fit: cover;
-            }
-          }
-          .content {
-            flex: 3;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            h1 {
-              font-size: 40px;
-            }
-
-            p {
-              text-align: justify;
-              font-size: 15px;
-            }
-
-            button {
-              @extend %ArticleButton;
-            }
-          }
-        }
-      }
-    }
-
-    //Single
-
-    .single {
-      // @extend %GlassEffect;
-      padding: 10px;
-      margin-top: 25px;
-      display: flex;
-      gap: 25px;
-
-      .content {
-        flex: 5;
-
-        img {
-          width: $ContentImageWidth;
-          height: $ContentImageHeight;
-          object-fit: cover;
-          border-radius: 20px;
-        }
-
-        .user {
-          display: flex;
-          margin-top: 10px;
-          align-items: center;
-          gap: 10px;
-          font-size: 13px;
-
-          img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-          }
-
-          span {
-            font-size: 14px;
-            font-family: "Times New Roman", Times, serif;
-            font-weight: bold;
-          }
-
-          p {
-            margin: 0px;
-            font-family: $NavBarFont;
-            font-style: italic;
-          }
-
-          .edit {
-            display: flex;
-            gap: 5px;
-
-            img {
-              width: 30px;
-              height: 30px;
-              cursor: pointer;
-            }
-          }
-        }
-
-        .article {
-          h1 {
-            // padding: 0 10px 0 10px;
-            font-family: $ArticleTitleFont;
-          }
-
-          p {
-            line-height: 1.5;
-            // padding: 0 10px 0 10px;
-            text-align: justify;
-          }
-        }
-      }
-
-      .menu {
-        flex: 2;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-
-        h3 {
-          font-family: $NavBarFont;
-          margin: 0px;
-        }
-
+    .mainContainer {
+      width: 1024px;
+      margin: auto;
+      // @extend %GlassEffectContentContainer;
+      // HOME
+      .home {
+        // @extend %GlassEffect;
         .posts {
+          margin: 50px;
           display: flex;
           flex-direction: column;
-          gap: 25px;
+          gap: 100px;
 
           .post {
             display: flex;
-            flex-direction: column;
+            gap: 100px;
 
-            img {
-              width: 100%;
-              height: 200px;
-              object-fit: cover;
-              border-radius: 20px;
+            &:nth-child(2n + 1) {
+              flex-direction: row-reverse;
             }
 
-            h3 {
-              margin-top: 10px;
-              margin-bottom: 10px;
+            .img {
+              flex: 2;
+              position: relative;
+
+              &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                border-radius: 15px;
+                background-color: lightgray;
+                position: absolute;
+                top: 10px;
+                left: -10px;
+                z-index: -1;
+              }
+
+              img {
+                width: 100%;
+                max-height: 400px;
+                border-radius: 15px;
+                object-fit: cover;
+              }
+            }
+            .content {
+              flex: 3;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+
+              h1 {
+                font-size: 40px;
+              }
+
+              p {
+                text-align: justify;
+                font-size: 15px;
+              }
+
+              button {
+                @extend %ArticleButton;
+              }
+            }
+          }
+        }
+      }
+
+      //Single
+      .single {
+        // @extend %GlassEffect;
+        padding: 25px;
+        // margin-top: 25px;
+        display: flex;
+        gap: 25px;
+
+        .content {
+          flex: 5;
+
+          img {
+            width: $ContentImageWidth;
+            height: $ContentImageHeight;
+            object-fit: cover;
+            border-radius: 20px;
+          }
+
+          .user {
+            display: flex;
+            margin-top: 10px;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+
+            img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+
+            span {
+              font-size: 14px;
+              font-family: "Times New Roman", Times, serif;
+              font-weight: bold;
+            }
+
+            p {
+              margin: 0px;
+              font-family: $NavBarFont;
+              font-style: italic;
+            }
+
+            .edit {
+              display: flex;
+              gap: 5px;
+
+              img {
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+              }
+            }
+          }
+
+          .article {
+            h1 {
+              // padding: 0 10px 0 10px;
               font-family: $ArticleTitleFont;
             }
 
-            button {
-              @extend %ArticleButton;
+            p {
+              line-height: 1.5;
+              // padding: 0 10px 0 10px;
+              text-align: justify;
             }
           }
         }
-      }
-    }
 
-    //Write
-    .add {
-      display: flex;
-      flex-direction: row;
-      gap: 10px;
-      margin-top: 10px;
-
-      .content {
-        flex: 5;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-
-        input {
-          padding: 10px;
-          border: 2px solid lightgray;
-          border-radius: 10px;
-        }
-
-        .editorContainer {
-          width: 725px;
-          height: 300px;
-          overflow: hidden;
-          border: 1px solid lightgray;
-          border-radius: 10px;
-
-          .editor {
-            height: 100%;
-          }
-        }
-      }
-
-      .menu {
-        flex: 2;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-
-        .item {
-          padding: 10px;
-          border: 2px solid lightgray;
-          border-radius: 10px;
-          flex: 1;
+        .menu {
+          flex: 2;
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
-          font-size: 12px;
-          color: #555;
-          font-family: $ArticleTitleFont;
+          gap: 10px;
 
-          h1 {
-            font-size: 20px;
+          h3 {
+            font-family: $NavBarFont;
             margin: 0px;
           }
 
-          .file {
-            border: 2px solid $ColourMedium;
-            padding: 5px;
+          .posts {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+
+            .post {
+              display: flex;
+              flex-direction: column;
+
+              img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 20px;
+              }
+
+              h3 {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                font-family: $ArticleTitleFont;
+              }
+
+              button {
+                @extend %ArticleButton;
+              }
+            }
+          }
+        }
+      }
+
+      //Write
+      .add {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 10px;
+
+        .content {
+          flex: 5;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          input {
+            padding: 10px;
+            border: 2px solid lightgray;
             border-radius: 10px;
-            text-decoration: none;
-            cursor: pointer;
           }
 
-          .buttons {
+          .editorContainer {
+            width: 725px;
+            height: 300px;
+            overflow: hidden;
+            border: 1px solid lightgray;
+            border-radius: 10px;
+
+            .editor {
+              height: 100%;
+            }
+          }
+        }
+
+        .menu {
+          flex: 2;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .item {
+            padding: 10px;
+            border: 2px solid lightgray;
+            border-radius: 10px;
+            flex: 1;
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
+            font-size: 12px;
+            color: #555;
+            font-family: $ArticleTitleFont;
 
-            :first-child {
-              cursor: pointer;
-              color: $ColourDark;
-              background-color: $ColourLight;
-              border: 2px solid white;
-              border-radius: 10px;
+            h1 {
+              font-size: 20px;
+              margin: 0px;
+            }
+
+            .file {
+              border: 2px solid $ColourMedium;
               padding: 5px;
+              border-radius: 10px;
+              text-decoration: none;
+              cursor: pointer;
+            }
 
-              &:hover {
-                border: 2px solid $ColourDark;
-                background-color: white;
+            .buttons {
+              display: flex;
+              justify-content: space-between;
+
+              :first-child {
+                cursor: pointer;
+                color: $ColourDark;
+                background-color: $ColourLight;
+                border: 2px solid white;
+                border-radius: 10px;
+                padding: 5px;
+
+                &:hover {
+                  border: 2px solid $ColourDark;
+                  background-color: white;
+                }
+              }
+
+              :last-child {
+                cursor: pointer;
+                color: $ColourDark;
+                background-color: $ColourLight;
+                border: 2px solid white;
+                border-radius: 10px;
+                padding: 5px;
+
+                &:hover {
+                  border: 2px solid $ColourDark;
+                  background-color: white;
+                }
               }
             }
 
-            :last-child {
-              cursor: pointer;
+            .cat {
+              display: flex;
+              flex-direction: row;
+              gap: 10px;
+              align-items: center;
               color: $ColourDark;
-              background-color: $ColourLight;
-              border: 2px solid white;
-              border-radius: 10px;
-              padding: 5px;
-
-              &:hover {
-                border: 2px solid $ColourDark;
-                background-color: white;
-              }
             }
-          }
-
-          .cat {
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-            align-items: center;
-            color: $ColourDark;
           }
         }
       }
