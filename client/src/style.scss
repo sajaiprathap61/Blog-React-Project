@@ -129,7 +129,16 @@ $ContentImageHeight: 400px;
     //Navigation bar
     .navbar {
       // @extend %GlassEffectHeaderFooter;
+
+      overflow: hidden;
+      background-color: white;
+      position: sticky;
+      top: 0;
+      width: 100%;
+
       .container {
+        height: 50px;
+        border-bottom: 1px solid black;
         padding: 10px 0px;
         display: flex;
         align-items: center;
@@ -137,7 +146,7 @@ $ContentImageHeight: 400px;
 
         .logo {
           img {
-            width: 100px;
+            width: 75px;
           }
         }
 
@@ -209,7 +218,7 @@ $ContentImageHeight: 400px;
 
           .post {
             display: flex;
-            gap: 100px;
+            gap: 50px;
 
             &:nth-child(2n + 1) {
               flex-direction: row-reverse;
@@ -217,7 +226,7 @@ $ContentImageHeight: 400px;
 
             .img {
               flex: 2;
-              position: relative;
+              position: static;
 
               &::after {
                 content: "";

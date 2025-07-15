@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Image1 from "../images/Image1.jpg";
-import Image6 from "../images/Image6.webp";
+import Image6 from "../images/Image6.jpg";
 import Edit from "../images/Edit.png";
 import Delete from "../images/Delete.png";
 import Menu from "../pages/Menu";
