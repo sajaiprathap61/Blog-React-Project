@@ -57,5 +57,8 @@ export const login = (req, res) => {
 };
 
 export const logout = (req, res) => {
-  res.json("logout");
+  res
+    .clearCookie("access_token", { sameSite: "none", secure: true })
+    .status(200)
+    .json("user logged out");
 };
