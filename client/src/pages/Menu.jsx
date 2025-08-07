@@ -56,7 +56,7 @@ const Menu = ({ cat }) => {
       <div className="posts">
         {posts.map((post) => (
           <div className="post" key={post.id}>
-            <img src={post.img} />
+            <img src={`../public${post?.img}`} />
             <Link className="link" to={`/post/${post.id}`}>
               <h3>{post.title}</h3>
             </Link>

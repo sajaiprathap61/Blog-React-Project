@@ -2,8 +2,10 @@ import express from "express";
 import authRoutes from "./routes/auth.js";
 import userRoutes from "./routes/users.js";
 import postRoutes from "./routes/posts.js";
+import uploadRoutes from "./routes/upload.js";
 import cors from "cors";
 import cookieParser from "cookie-parser";
+import multer from "multer";
 
 const app = express();
 
@@ -20,6 +22,7 @@ app.use(cookieParser());
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
+app.use("/api/upload", uploadRoutes);
 
 const port = 8000;
 app.listen(port, () => {

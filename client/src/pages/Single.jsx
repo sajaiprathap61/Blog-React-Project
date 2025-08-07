@@ -9,6 +9,7 @@ import { useContext } from "react";
 import { AuthContext } from "../context/authContext";
 import moment from "moment";
 import axios from "axios";
+import getText from "../utils/CommonFunctions.js";
 
 const Single = () => {
   const [post, setPost] = useState({});
@@ -46,16 +47,16 @@ const Single = () => {
   return (
     <div className="single">
       <div className="content">
-        <img src={post?.img} />
+        <img src={`../public${post?.img}`} />
         <div className="user">
           {post.userImg && <img src={post.userImg} />}
           <div className="info">
             <span>{post.username}</span>
             <p>Posted {moment(post.date).fromNow()}</p>
           </div>
-          {currentUser.username === post.username && (
+          {currentUser?.username === post?.username && (
             <div className="edit">
-              <Link to={`/write?edit=2`}>
+              <Link to={`/write?edit=2`} state={post}>
                 <img src={Edit} />
               </Link>
               <Link>
@@ -66,7 +67,7 @@ const Single = () => {
         </div>
         <div className="article">
           <h1>{post.title}</h1>
-          {post.description}
+          {getText(post.description)}
         </div>
       </div>
       <Menu cat={post.cat} />
